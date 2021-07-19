@@ -1,0 +1,34 @@
+# Path to the plotter executable
+# Windows: ../madMAx43v3r_chia-plotter_win_v<VERSION>/chia_plot.exe
+# macOS: ../chia-plotter/build/chia_plot
+# Linux: ../chia-plotter/build/chia_plot
+plotter_path: ../chia-plotter/build/chia_plot # macOS
+madmax:
+  # Temporary Drive
+  # Windows: "A:\"
+  # macOS: "/Volumes/A"
+  # Linux: "/mnt/A"
+  tmpdir: A:\
+  # Temporary Drive 2 (ideally a ramdisk, as by madmax docs)
+  # Windows: "R:\"
+  # macOS: "/Volumes/R"
+  # Linux: "/mnt/R"
+  tmpdir2: R:\
+  # Destination Directories (array), these will be filled with plots until their drive is full
+  # Windows: [X:\, Y:\, Z:\]
+  # macOS: [/Volumes/X, /Volumes/Y, /Volumes/Z]
+  # Linux: [/mnt/X, /mnt/Y, /mnt/Z]
+  finaldir: [/Volumes/TG2TB, /Users, /Applications]
+  # Thread Count
+  threads: 14
+  # Pool Key
+  poolkey: <POOL>
+  # Farmer Key
+  farmerkey: <FARMER>
+manager: null
+  # log_level: INFO # INFO, WARNING
+
+# The default values will result in these commands:
+# ./chia_plot.exe --tmpdir A:\ --tmpdir2 R:\ --finaldir D:\ --threads 14 --poolkey <POOL> --farmerkey <FARMER>
+# ./chia_plot.exe --tmpdir A:\ --tmpdir2 R:\ --finaldir E:\ --threads 14 --poolkey <POOL> --farmerkey <FARMER>
+# ./chia_plot.exe --tmpdir A:\ --tmpdir2 R:\ --finaldir F:\ --threads 14 --poolkey <POOL> --farmerkey <FARMER>
